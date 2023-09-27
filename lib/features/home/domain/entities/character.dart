@@ -1,50 +1,62 @@
-import 'package:equatable/equatable.dart';
-import 'package:clean_arch_templ/features/home/domain/entities/location.dart';
+import 'package:floor/floor.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class CharacterEntity extends Equatable {
-  const CharacterEntity({
-    this.id,
-    this.name,
-    this.status,
-    this.species,
-    this.type,
-    this.gender,
-    this.origin,
-    this.location,
-    this.image,
-    this.episode,
-    this.url,
-    this.created,
-  });
+part 'character.freezed.dart';
+part 'character.g.dart';
 
-  final int? id;
-  final String? name;
-  final String? status;
-  final String? species;
-  final String? type;
-  final String? gender;
-  final LocationEntity? origin;
-  final LocationEntity? location;
-  final String? image;
-  final List<String>? episode;
-  final String? url;
-  final DateTime? created;
+@freezed
+class CharacterResponse with _$CharacterResponse {
+  const factory CharacterResponse({
+    required Info info,
+    required List<CharacterEntity> results,
+  }) = _CharacterResponse;
 
-  @override
-  List<Object?> get props => [
-        id,
-        name,
-        status,
-        species,
-        type,
-        gender,
-        origin,
-        location,
-        image,
-        episode,
-        url,
-        created,
-      ];
+  factory CharacterResponse.fromJson(Map<String, dynamic> json) =>
+      _$CharacterResponseFromJson(json);
+}
 
-  bool get isAlive => status == 'Alive';
+@freezed
+class Info with _$Info {
+  const factory Info({
+    required int count,
+    required int pages,
+    required String? next,
+    required String? prev,
+  }) = _Info;
+
+  factory Info.fromJson(Map<String, dynamic> json) => _$InfoFromJson(json);
+}
+
+@freezed
+@Entity(tableName: 'character',primaryKeys: ['id'])
+abstract class CharacterEntity with _$CharacterEntity {
+  const factory CharacterEntity({
+    int? id,
+    String? name,
+    String? status,
+    String? species,
+    String? type,
+    String? gender,
+    String? image,
+    List<String>? episode,
+    String? url,
+    DateTime? created,
+  }) = _CharacterEntity;
+
+  factory CharacterEntity.fromJson(Map<String, dynamic> map) =>
+      _$CharacterEntityFromJson(map);
+
+  factory CharacterEntity.fromEntity(CharacterEntity entity) =>
+      CharacterEntity(
+        id: entity.id,
+        name: entity.name,
+        status: entity.status,
+        species: entity.species,
+        type: entity.type,
+        gender: entity.gender,
+        image: entity.image,
+        episode: entity.episode,
+        url: entity.url,
+        created: entity.created,
+      );
 }

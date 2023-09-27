@@ -64,13 +64,13 @@ class _ItemDescription extends StatelessWidget {
                 ),
               ),
               Text(
-                'Status: ${item.isAlive ? 'ALIVE' : 'DEAD'}',
+                'Status: ${item.status == 'Alive' ? 'ALIVE' : 'DEAD'}',
                 style: textTheme.labelSmall!.copyWith(
-                  color: item.isAlive ? Colors.lightGreen : Colors.redAccent,
+                  color: item.status == 'Alive' ? Colors.lightGreen : Colors.redAccent,
                 ),
               ),
               Text(
-                'Last location: ${item.location?.name ?? ''}',
+                'Gender: ${item.gender ?? ''}',
                 style: textTheme.labelSmall!.copyWith(
                   color: colorScheme.onSurfaceVariant,
                 ),

@@ -43,7 +43,7 @@ class RemoteCharactersBloc
       final _characters = _characterResponse.results;
       emit(state.copyWith(
           pStatus: RemoteCharactersStatus.success,
-          pHasMaxReached: _characterResponse.pages <= _page,
+          pHasMaxReached: _characterResponse.info.pages <= _page,
           pCharacters: List.of(state.characters)..addAll(_characters)));
       _page++;
     } else {

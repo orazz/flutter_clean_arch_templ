@@ -1,3 +1,4 @@
+import 'package:clean_arch_templ/config/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class LoadingFailedWidget extends StatelessWidget {
@@ -26,7 +27,7 @@ class LoadingFailedWidget extends StatelessWidget {
               style: TextStyle(
                   fontSize: 18.0, color: Colors.black.withOpacity(0.5))),
           const SizedBox(
-            height: 8.0,
+            height: DEFAULT_BORDER_RADIUS,
           ),
           TextButton(
               onPressed: onRetry,

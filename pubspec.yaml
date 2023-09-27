@@ -34,6 +34,10 @@ dependencies:
 
   #chached image 
   cached_network_image: ^3.2.3
+
+  #entities
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
   
   shared_preferences: ^2.2.1
   shimmer: ^3.0.0
@@ -45,6 +49,8 @@ dev_dependencies:
   retrofit_generator: 7.0.8
   floor_generator: 1.4.2
   build_runner: 2.4.6
+  freezed: ^2.4.1
+  json_serializable: ^6.7.1
   
 
 # For information on the generic Dart part of this file, see the

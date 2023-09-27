@@ -1,9 +1,9 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:clean_arch_templ/core/resources/data_state.dart';
 import 'package:clean_arch_templ/features/home/data/data_source/remote/api_service.dart';
-import 'package:clean_arch_templ/features/home/data/models/character.dart';
 import 'package:clean_arch_templ/features/home/domain/entities/character.dart';
 import 'package:clean_arch_templ/features/home/domain/repository/character_repository.dart';
 
@@ -20,7 +20,8 @@ class CharacterRepositoryImpl implements CharacterRepository {
         page,
       );
       if (httpResponse.response.statusCode == HttpStatus.ok) {
-        final characters = httpResponse.data;
+        final Map<String, dynamic> jsonDataMap = json.decode(httpResponse.data);
+        final characters = CharacterResponse.fromJson(jsonDataMap);
         return DataSuccess(characters);
       } else {
         return DataFailed(DioException(
@@ -35,7 +36,7 @@ class CharacterRepositoryImpl implements CharacterRepository {
   }
 
   @override
-  Future<List<CharacterModel>> getSavedCharacters() async {
+  Future<List<CharacterEntity>> getSavedCharacters() async {
     return []; 
   }
 
