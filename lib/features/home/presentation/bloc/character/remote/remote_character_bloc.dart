@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:clean_arch_templ/core/resources/data_state.dart';
-import 'package:clean_arch_templ/features/home/domain/usecases/get_character.dart';
-import 'package:clean_arch_templ/features/home/presentation/bloc/character/remote/remote_character_event.dart';
-import 'package:clean_arch_templ/features/home/presentation/bloc/character/remote/remote_character_state.dart';
+import 'package:flutter_clean_arch_templ/core/resources/data_state.dart';
+import 'package:flutter_clean_arch_templ/features/home/domain/usecases/get_character.dart';
+import 'package:flutter_clean_arch_templ/features/home/presentation/bloc/character/remote/remote_character_event.dart';
+import 'package:flutter_clean_arch_templ/features/home/presentation/bloc/character/remote/remote_character_state.dart';
 
 class RemoteCharactersBloc
     extends Bloc<RemoteCharactersEvent, RemoteCharactersState> {

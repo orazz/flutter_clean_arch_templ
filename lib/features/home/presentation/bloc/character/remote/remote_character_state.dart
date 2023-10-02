@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:clean_arch_templ/features/home/domain/entities/character.dart';
+import 'package:flutter_clean_arch_templ/features/home/domain/entities/character.dart';
 
 enum RemoteCharactersStatus { loading, success, failed }
 

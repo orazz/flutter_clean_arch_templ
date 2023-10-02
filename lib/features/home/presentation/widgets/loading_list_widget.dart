@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:clean_arch_templ/config/constants/constants.dart';
-import 'package:clean_arch_templ/features/home/presentation/widgets/laoding_widget.dart';
+import 'package:flutter_clean_arch_templ/config/constants/constants.dart';
+import 'package:flutter_clean_arch_templ/features/home/presentation/widgets/laoding_widget.dart';
 import 'package:shimmer/shimmer.dart';
 
 class LoadingListWidget extends StatelessWidget {
@@ -9,8 +9,8 @@ class LoadingListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
-      baseColor: Colors.grey[300]!,
-      highlightColor: Colors.grey[100]!,
+      baseColor: SHIMMER_BASE,
+      highlightColor: SHIMMER_HIGHLIGHT,
       enabled: false,
       child: ListView.separated(
         itemCount: 60,

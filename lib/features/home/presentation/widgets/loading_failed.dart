@@ -1,4 +1,4 @@
-import 'package:clean_arch_templ/config/constants/constants.dart';
+import 'package:flutter_clean_arch_templ/config/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class LoadingFailedWidget extends StatelessWidget {

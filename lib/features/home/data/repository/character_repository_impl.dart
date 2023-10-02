@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:clean_arch_templ/core/resources/data_state.dart';
-import 'package:clean_arch_templ/features/home/data/data_source/remote/api_service.dart';
-import 'package:clean_arch_templ/features/home/domain/entities/character.dart';
-import 'package:clean_arch_templ/features/home/domain/repository/character_repository.dart';
+import 'package:flutter_clean_arch_templ/core/resources/data_state.dart';
+import 'package:flutter_clean_arch_templ/features/home/data/data_source/remote/api_service.dart';
+import 'package:flutter_clean_arch_templ/features/home/domain/entities/character.dart';
+import 'package:flutter_clean_arch_templ/features/home/domain/repository/character_repository.dart';
 
 class CharacterRepositoryImpl implements CharacterRepository {
   final NewsApiService _newsApiService;

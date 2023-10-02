@@ -1,6 +1,6 @@
 {
-    "name": "clean_arch_templ",
-    "short_name": "clean_arch_templ",
+    "name": "flutter_clean_arch_templ",
+    "short_name": "flutter_clean_arch_templ",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

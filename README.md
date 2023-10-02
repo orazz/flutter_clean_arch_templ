@@ -1,4 +1,4 @@
-# clean_arch_templ
+# flutter_clean_arch_templ
 
 A Flutter Rick and Morty App in Clean Architecture.
 

@@ -1,4 +1,4 @@
-package com.orazz.clean_arch_templ
+package com.orazz.flutter_clean_arch_templ
 
 import io.flutter.embedding.android.FlutterActivity
 

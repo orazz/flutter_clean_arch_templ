@@ -1,5 +1,5 @@
-import 'package:clean_arch_templ/core/resources/data_state.dart';
-import 'package:clean_arch_templ/features/home/domain/entities/character.dart';
+import 'package:flutter_clean_arch_templ/core/resources/data_state.dart';
+import 'package:flutter_clean_arch_templ/features/home/domain/entities/character.dart';
 
 abstract class CharacterRepository {
   // API methods

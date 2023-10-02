@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:clean_arch_templ/config/constants/constants.dart';
+import 'package:flutter_clean_arch_templ/config/constants/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:clean_arch_templ/features/home/domain/entities/character.dart';
+import 'package:flutter_clean_arch_templ/features/home/domain/entities/character.dart';
 
 class CharacterWidget extends StatelessWidget {
   const CharacterWidget({super.key, required this.item, required this.onCharacterClick});
@@ -14,7 +14,7 @@ class CharacterWidget extends StatelessWidget {
     return InkWell(
       onTap: onCharacterClick,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+        padding: EdgeInsets.symmetric(horizontal: DEFAULT_PADDING, vertical: DEFAULT_PADDING),
         child: SizedBox(
           height: 90,
           child: Row(
@@ -66,7 +66,7 @@ class _ItemDescription extends StatelessWidget {
               Text(
                 'Status: ${item.status == 'Alive' ? 'ALIVE' : 'DEAD'}',
                 style: textTheme.labelSmall!.copyWith(
-                  color: item.status == 'Alive' ? Colors.lightGreen : Colors.redAccent,
+                  color: item.status == 'Alive' ? ALIVE : DEAD,
                 ),
               ),
               Text(

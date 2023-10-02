@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:clean_arch_templ/config/constants/constants.dart';
-import 'package:clean_arch_templ/features/home/domain/entities/character.dart';
-import 'package:clean_arch_templ/features/home/presentation/pages/character_details/character_details.dart';
-import 'package:clean_arch_templ/features/home/presentation/pages/home/home.dart';
+import 'package:flutter_clean_arch_templ/config/constants/constants.dart';
+import 'package:flutter_clean_arch_templ/features/home/domain/entities/character.dart';
+import 'package:flutter_clean_arch_templ/features/home/presentation/pages/character_details/character_details.dart';
+import 'package:flutter_clean_arch_templ/features/home/presentation/pages/home/home.dart';
 
 class AppRoutes {
   static Route onGenerateRoutes(RouteSettings settings) {

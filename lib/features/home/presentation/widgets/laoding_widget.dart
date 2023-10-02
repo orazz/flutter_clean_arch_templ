@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_arch_templ/config/constants/constants.dart';
 
 class LoadingWidget extends StatelessWidget {
   final double? width, height;
@@ -11,7 +12,7 @@ class LoadingWidget extends StatelessWidget {
       height: height,
       padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
-          color: Colors.black, borderRadius: BorderRadius.circular(10.0)),
+          color: Colors.black, borderRadius: BorderRadius.circular(DEFAULT_BORDER_RADIUS)),
     );
   }
 }

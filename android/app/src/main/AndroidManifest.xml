@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="clean_arch_templ"
+        android:label="flutter_clean_arch_templ"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

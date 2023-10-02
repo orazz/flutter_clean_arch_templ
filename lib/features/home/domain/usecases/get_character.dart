@@ -1,7 +1,7 @@
-import 'package:clean_arch_templ/core/resources/data_state.dart';
-import 'package:clean_arch_templ/core/usecase/usecase.dart';
-import 'package:clean_arch_templ/features/home/domain/entities/character.dart';
-import 'package:clean_arch_templ/features/home/domain/repository/character_repository.dart';
+import 'package:flutter_clean_arch_templ/core/resources/data_state.dart';
+import 'package:flutter_clean_arch_templ/core/usecase/usecase.dart';
+import 'package:flutter_clean_arch_templ/features/home/domain/entities/character.dart';
+import 'package:flutter_clean_arch_templ/features/home/domain/repository/character_repository.dart';
 
 class GetCharacterUseCase implements UseCase<DataState<CharacterResponse>, int>{
   

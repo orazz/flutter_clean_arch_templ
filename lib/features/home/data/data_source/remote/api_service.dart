@@ -1,4 +1,4 @@
-import 'package:clean_arch_templ/core/constants/constants.dart';
+import 'package:flutter_clean_arch_templ/core/constants/constants.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 

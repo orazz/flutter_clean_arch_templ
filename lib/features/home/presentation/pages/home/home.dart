@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:clean_arch_templ/config/constants/constants.dart';
-import 'package:clean_arch_templ/features/home/domain/entities/character.dart';
-import 'package:clean_arch_templ/features/home/presentation/bloc/character/remote/remote_character_bloc.dart';
-import 'package:clean_arch_templ/features/home/presentation/bloc/character/remote/remote_character_event.dart';
-import 'package:clean_arch_templ/features/home/presentation/bloc/character/remote/remote_character_state.dart';
-import 'package:clean_arch_templ/features/home/presentation/bloc/theme_mode/theme_bloc.dart';
-import 'package:clean_arch_templ/features/home/presentation/widgets/character_widget.dart';
-import 'package:clean_arch_templ/features/home/presentation/widgets/loading_failed.dart';
-import 'package:clean_arch_templ/features/home/presentation/widgets/loading_list_widget.dart';
-import 'package:clean_arch_templ/injection_container.dart';
+import 'package:flutter_clean_arch_templ/config/constants/constants.dart';
+import 'package:flutter_clean_arch_templ/features/home/domain/entities/character.dart';
+import 'package:flutter_clean_arch_templ/features/home/presentation/bloc/character/remote/remote_character_bloc.dart';
+import 'package:flutter_clean_arch_templ/features/home/presentation/bloc/character/remote/remote_character_event.dart';
+import 'package:flutter_clean_arch_templ/features/home/presentation/bloc/character/remote/remote_character_state.dart';
+import 'package:flutter_clean_arch_templ/features/home/presentation/bloc/theme_mode/theme_bloc.dart';
+import 'package:flutter_clean_arch_templ/features/home/presentation/widgets/character_widget.dart';
+import 'package:flutter_clean_arch_templ/features/home/presentation/widgets/loading_failed.dart';
+import 'package:flutter_clean_arch_templ/features/home/presentation/widgets/loading_list_widget.dart';
+import 'package:flutter_clean_arch_templ/injection_container.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -37,13 +37,13 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  _buildAppbar(BuildContext context) {
+  PreferredSizeWidget _buildAppbar(BuildContext context) {
     return AppBar(
       title: const Text('Characters'),
       actions: [
         IconButton(
           onPressed: () {
-            sl<ThemeBloc>()..add(ThemeToggle());
+            sl<ThemeBloc>().add(ThemeToggle());
           },
           icon: const Icon(Icons.light_mode),
         ),
@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  _buildBody() {
+  Widget _buildBody() {
     return BlocBuilder<RemoteCharactersBloc, RemoteCharactersState>(
       builder: (_, state) {
         if (state.characters.isNotEmpty) {
