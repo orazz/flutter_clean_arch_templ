@@ -36,7 +36,7 @@ class RemoteCharactersBloc
   Future<void> _getCharacters(Emitter<RemoteCharactersState> emit) async {
     emit(state.copyWith(pStatus: RemoteCharactersStatus.loading));
     _isLoading = true;
-    final _dataResult = await _getCharacterUseCase(params: _page);
+    final _dataResult = await _getCharacterUseCase(Params(number: _page));
 
     if (_dataResult is DataSuccess) {
       final _characterResponse = _dataResult.data!;
